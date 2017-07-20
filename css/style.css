@@ -1,0 +1,168 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #a80000;
+  font-family: "montserrat", sans-serif;
+}
+
+/* NAVIGATION */
+
+nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+}
+
+#navtogglebutton {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #840000;
+  border-radius: 50%;
+}
+
+#bar1 {
+  background-color: #000000;
+  height: 3px;
+  width: 20px;
+  margin-top: 12px;
+  margin-left: 10px;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  transition: 0.5s;
+}
+
+#bar3 {
+  background-color: #000000;
+  height: 3px;
+  width: 20px;
+  margin: 3px 10px;
+  transition: 0.5s;
+}
+
+#bar2 {
+  background-color: #000000;
+  height: 3px;
+  width: 20px;
+  margin: 3px 10px;
+  transition: opacity 0.5s;
+}
+
+.rotateBar1 {
+  -webkit-transform: translate(0, 6px) rotate(-45deg);
+  -moz-transform: translate(0, 6px) rotate(-45deg);
+  -o-transform: translate(0, 6px) rotate(-45deg);
+  transform: translate(0, 6px) rotate(-45deg);
+}
+
+.hideBar2 {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+}
+
+.rotateBar3 {
+  -webkit-transform: translate(0, -6px) rotate(45deg);
+  -moz-transform: translate(0, -6px) rotate(45deg);
+  -o-transform: translate(0, -6px) rotate(45deg);
+  transform: translate(0, -6px) rotate(45deg);
+}
+
+#navbar {
+  padding: 0;
+  position: fixed;
+  top: -110%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+#navbarfirstbutton {
+  margin-top: 10%;
+}
+
+#navbar li {
+  font-size: 3vh;
+  text-align: center;
+  list-style: none;
+  padding: 1% 0px;
+}
+
+.navbutton {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.navbutton:hover {
+  color: #ffff00;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+/* GENERAL */
+#maincontent {
+  margin-top: 5%;
+  width: 100%;
+  height: 100%;
+}
+
+.divider {
+  margin: 0 auto;
+  background-color: #000000;
+  width: 60%;
+  height: 1px;
+}
+
+.shortdivider {
+  margin: 10px auto;
+  background-color: #000000;
+  width: 25%;
+  height: 1px;
+}
+
+#pageheader {
+  text-align: center;
+  font-size: 5vh;
+  padding-top: 2%;
+}
+
+.toFadeIn {
+  opacity: 0;
+  margin-top: 20px;
+}
+
+/* HOME PAGE */
+
+#homesubcontent {
+  text-align: center;
+  font-size: 3vh;
+}
+
+#personalpiccropper {
+  margin: 15px auto;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+#personalpic {
+  margin-top: -50px;
+  width: 100%;
+  height: auto;
+}
+
+#name {
+  font-size: 4vh;
+}
