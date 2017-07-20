@@ -1,10 +1,10 @@
 var up = true;
 
-$(function () {
-  $("#navtogglebutton").click(function() {
+$(function() {
+  $("#navtogglebutton").on('click', function() {
     if(up) {
       $("#navbar").animate({
-        top: 50,
+        top: 60,
         opacity: 1
       });
 
