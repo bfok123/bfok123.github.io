@@ -12,13 +12,15 @@ body {
 /* NAVIGATION */
 
 nav {
+  z-index: 1;
   width: 100%;
-  height: 100%;
+  height: 0;
   position: fixed;
   top: 0;
 }
 
 #navtogglebutton {
+  z-index: 2;
   position: fixed;
   right: 20px;
   top: 20px;
@@ -26,6 +28,18 @@ nav {
   height: 50px;
   background-color: #840000;
   border-radius: 50%;
+}
+
+#navtogglebutton:hover.navHidden #bar1 {
+  -webkit-transform: translate(0, -3px);
+  -moz-transform: translate(0, -3px);
+  -o-transform: translate(0, -3px);
+}
+
+#navtogglebutton:hover.navHidden #bar3 {
+  -webkit-transform: translate(0, 3px);
+  -moz-transform: translate(0, 3px);
+  -o-transform: translate(0, 3px);
 }
 
 #bar1 {
@@ -111,6 +125,39 @@ nav {
 }
 
 /* GENERAL */
+
+.linklogo {
+  display: inline-block;
+  transition: 0.5s;
+  margin-right: 1vw;
+}
+
+.linklogo img {
+  height: 3.1vh;
+  vertical-align: text-top;
+}
+
+.link:hover .linklogo {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.link {
+  vertical-align: bottom;
+  text-decoration: none;
+  color: #000000;
+}
+
+.link:hover {
+  color: #ffffff;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
 #maincontent {
   margin-top: 5%;
   width: 100%;
@@ -137,17 +184,23 @@ nav {
   padding-top: 2%;
 }
 
-.toFadeIn {
+.toFadeIn, .toFadeInScroll {
+  z-index: 0;
   opacity: 0;
-  margin-top: 20px;
+  position: relative;
+  top: 20px;
 }
 
-/* HOME PAGE */
-
-#homesubcontent {
+#subcontent {
   text-align: center;
   font-size: 3vh;
 }
+
+.subcontentheader {
+  font-size: 4vh;
+}
+
+/* HOME PAGE */
 
 #personalpiccropper {
   margin: 15px auto;
@@ -163,6 +216,8 @@ nav {
   height: auto;
 }
 
-#name {
-  font-size: 4vh;
+/* PROJECTS PAGE */
+
+.programlang {
+  font-size: 2.5vh;
 }

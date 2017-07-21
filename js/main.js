@@ -1,22 +1,21 @@
-var up = true;
-
 $(function() {
-  $("#navtogglebutton").on('click', function() {
-    if(up) {
-      $("#navbar").animate({
+  $('#navtogglebutton').on('click', function() {
+    $('#navbar').fadeIn();
+    if($(this).hasClass('navHidden')) {
+      $('#navbar').animate({
         top: 60,
         opacity: 1
       });
 
-      up = false;
+      $(this).removeClass('navHidden');
     }
-    else if(!up) {
+    else if(!$(this).hasClass('navHidden')) {
       $("#navbar").animate({
         top: '-7' + $(this).height(),
         opacity: 0
       });
 
-      up = true;
+      $(this).addClass('navHidden');
     }
 
     $("#bar1").toggleClass('rotateBar1');
@@ -35,38 +34,39 @@ function isInViewPort($element) {
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
-    rect.bottom <= $.getDocHeight() &&
-    rect.right <= $(window).outerWidth()
+    rect.bottom - 15 <= $(window).height() && // because fadeIn elements start with a top value of 20
+    rect.right <= $(window).width()
   );
 }
 
-// because (window).height() was off in chrome for some reason
-$.getDocHeight = function(){
-    return Math.max(
-        $(document).height(),
-        $(window).height(),
-        /* For opera: */
-        document.documentElement.clientHeight
-    );
-};
-
 function checkAnimation() {
-  $('.toFadeIn').map(function() {
+  $('.toFadeInScroll').map(function() {
     // elements only fade in once, unless user refreshes page
     if(isInViewPort($(this)) && !$(this).hasClass('fadedIn')) {
       $(this).animate({
         opacity: 1,
-        marginTop: 0
+        top: 0
       }, 500);
       $(this).addClass('fadedIn');
     }
   });
 }
 
-$(window).scroll(function () {
+$(window).on('scroll', function () {
   checkAnimation();
 });
 
-$(window).ready(function (){
-  checkAnimation();
+$(window).on('load', function () {
+  $('.toFadeIn').map(function() {
+    if(isInViewPort($(this))) {
+      $(this).animate({
+        opacity: 1,
+        top: 0
+      }, 500);
+    }
+    else {
+      $(this).removeClass('toFadeIn');
+      $(this).addClass('toFadeInScroll');
+    }
+  });
 });
