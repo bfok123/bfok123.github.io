@@ -3,7 +3,7 @@ $(function() {
     $('#navbar').fadeIn();
     if($(this).hasClass('navHidden')) {
       $('#navbar').animate({
-        top: 60,
+        top: -15,
         opacity: 1
       });
 
@@ -34,7 +34,7 @@ function isInViewPort($element) {
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
-    rect.bottom - 15 <= $(window).height() && // because fadeIn elements start with a top value of 20
+    rect.bottom - 20 <= $(window).height() && // because fadeIn elements start with a top value of 20
     rect.right <= $(window).width()
   );
 }
@@ -57,16 +57,24 @@ $(window).on('scroll', function () {
 });
 
 $(window).on('load', function () {
-  $('.toFadeIn').map(function() {
-    if(isInViewPort($(this))) {
-      $(this).animate({
-        opacity: 1,
-        top: 0
-      }, 500);
-    }
-    else {
-      $(this).removeClass('toFadeIn');
-      $(this).addClass('toFadeInScroll');
-    }
+  $('.dividerToWiden').animate({
+    width: $(window).width() * 0.6
+  }, 400, 'linear', function() {
+    $('.toSlideUpHeader').animate({
+      marginTop: 0
+    }, 400, 'linear', function() {
+      $('.toFadeIn').map(function() {
+        if(isInViewPort($(this))) {
+          $(this).animate({
+            opacity: 1,
+            top: 0
+          }, 400, 'linear');
+        }
+        else {
+          $(this).removeClass('toFadeIn');
+          $(this).addClass('toFadeInScroll');
+        }
+      });
+    });
   });
 });
