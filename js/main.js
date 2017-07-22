@@ -5,7 +5,7 @@ $(function() {
       $('#navbar').animate({
         top: -15,
         opacity: 1
-      });
+      }, 400);
 
       $(this).removeClass('navHidden');
     }
@@ -13,7 +13,7 @@ $(function() {
       $("#navbar").animate({
         top: '-7' + $(this).height(),
         opacity: 0
-      });
+      }, 400);
 
       $(this).addClass('navHidden');
     }
@@ -46,7 +46,7 @@ function checkAnimation() {
       $(this).animate({
         opacity: 1,
         top: 0
-      }, 500);
+      }, 400, 'linear');
       $(this).addClass('fadedIn');
     }
   });
