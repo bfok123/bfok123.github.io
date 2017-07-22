@@ -61,7 +61,7 @@ $(window).on('load', function () {
     width: $(window).width() * 0.6
   }, 400, 'linear', function() {
     $('.toSlideUpHeader').animate({
-      marginTop: 0
+      top: 0
     }, 400, 'linear', function() {
       $('.toFadeIn').map(function() {
         if(isInViewPort($(this))) {

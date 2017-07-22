@@ -218,12 +218,13 @@ nav {
 
 .slideUpHeaderContainer {
   height: 7%;
-  margin: 2% auto 0 auto;
+  margin-top: 2vh;
   overflow: hidden;
 }
 
 .toSlideUpHeader {
-  margin-top: 7vh;
+  position: relative;
+  top: 100%;
   font-size: 5vh;
   text-align: center;
 }
