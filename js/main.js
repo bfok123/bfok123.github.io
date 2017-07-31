@@ -34,8 +34,8 @@ function isInViewPort($element) {
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
-    rect.bottom - 20 <= $(window).height() && // because fadeIn elements start with a top value of 20
-    rect.right <= $(window).width()
+    rect.bottom - 20 <= $(window).innerHeight() && // because fadeIn elements start with a top value of 20
+    rect.right <= $(window).innerWidth()
   );
 }
 
