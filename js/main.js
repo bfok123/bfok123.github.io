@@ -1,19 +1,25 @@
 $(function() {
   $('#navtogglebutton').on('click', function() {
-    $('#navbar').fadeIn();
+    //$('#navbar').fadeIn();
     if($(this).hasClass('navHidden')) {
       $('#navbar').animate({
-        top: -15,
         opacity: 1
-      }, 400);
+      }, 0)
+      .animate({
+        height: '100%'
+      }, 400)
+
 
       $(this).removeClass('navHidden');
     }
     else if(!$(this).hasClass('navHidden')) {
       $("#navbar").animate({
-        top: '-7' + $(this).height(),
+        height: 0
+      }, 400)
+      .animate({
         opacity: 0
-      }, 400);
+      }, 0)
+
 
       $(this).addClass('navHidden');
     }
