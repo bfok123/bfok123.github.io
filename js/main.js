@@ -3,12 +3,14 @@ $(function() {
     //$('#navbar').fadeIn();
     if($(this).hasClass('navHidden')) {
       $('#navbar').animate({
+        top: -15
+      }, 0)
+      .animate({
         opacity: 1
       }, 0)
       .animate({
         height: '100%'
       }, 400)
-
 
       $(this).removeClass('navHidden');
     }
@@ -19,7 +21,9 @@ $(function() {
       .animate({
         opacity: 0
       }, 0)
-
+      .animate({
+        top: '-7' + $(this).height()
+      }, 0)
 
       $(this).addClass('navHidden');
     }

@@ -97,8 +97,8 @@ nav {
 #navbar {
   padding: 0;
   position: fixed;
-  top: -15px;
   width: 100%;
+  top: -115%;
   height: 0;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.8);
