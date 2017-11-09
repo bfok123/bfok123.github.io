@@ -1,7 +1,9 @@
 $(function() {
   $('#navtogglebutton').on('click', function() {
-    //$('#navbar').fadeIn();
     if($(this).hasClass('navHidden')) {
+      $('#navtogglebutton').animate({
+        backgroundColor: '#ff884d'
+      }, 400)
       $('#navbar').animate({
         top: -15
       }, 0)
@@ -15,6 +17,9 @@ $(function() {
       $(this).removeClass('navHidden');
     }
     else if(!$(this).hasClass('navHidden')) {
+      $('#navtogglebutton').animate({
+        backgroundColor: '#c1d0f0'
+      }, 400)
       $("#navbar").animate({
         height: 0
       }, 400)

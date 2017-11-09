@@ -5,7 +5,7 @@ body, html {
 }
 
 body {
-  background-color: #a80000;
+  background-color: #c1d0f0;
   font-family: "montserrat", sans-serif;
 }
 
@@ -26,7 +26,6 @@ nav {
   top: 20px;
   width: 50px;
   height: 50px;
-  background-color: #840000;
   border-radius: 50%;
 }
 
@@ -101,7 +100,7 @@ nav {
   top: -115%;
   height: 0;
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 136, 77, 0.95);
 }
 
 #navbarfirstbutton {
@@ -117,15 +116,15 @@ nav {
 
 .navbutton {
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
 }
 
 .navbutton:hover {
-  color: #ffff00;
-  -webkit-transition: color 0.5s;
-  -moz-transition: color 0.5s;
-  -o-transition: color 0.5s;
-  transition: color 0.5s;
+  color: #ffffff;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 /* GENERAL */
@@ -173,10 +172,10 @@ nav {
 
 .link:hover {
   color: #ffffff;
-  -webkit-transition: color 0.5s;
-  -moz-transition: color 0.5s;
-  -o-transition: color 0.5s;
-  transition: color 0.5s;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 #maincontent {
