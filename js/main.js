@@ -1,13 +1,7 @@
 $(function() {
   $('#navtogglebutton').on('click', function() {
     if($(this).hasClass('navHidden')) {
-      $('#navtogglebutton').animate({
-        backgroundColor: '#ff884d'
-      }, 400)
       $('#navbar').animate({
-        top: -15
-      }, 0)
-      .animate({
         opacity: 1
       }, 0)
       .animate({
@@ -17,17 +11,11 @@ $(function() {
       $(this).removeClass('navHidden');
     }
     else if(!$(this).hasClass('navHidden')) {
-      $('#navtogglebutton').animate({
-        backgroundColor: '#c1d0f0'
-      }, 400)
       $("#navbar").animate({
         height: 0
       }, 400)
       .animate({
         opacity: 0
-      }, 0)
-      .animate({
-        top: '-7' + $(this).height()
       }, 0)
 
       $(this).addClass('navHidden');
