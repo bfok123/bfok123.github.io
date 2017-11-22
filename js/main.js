@@ -2,21 +2,21 @@ $(function() {
   $('#navtogglebutton').on('click', function() {
     if($(this).hasClass('navHidden')) {
       $('#navbar').animate({
-        opacity: 1
-      }, 0)
-      .animate({
+        opacity: 1,
+        top: -15
+      }, 0).animate({
         height: '100%'
-      }, 400)
+      }, 400);
 
       $(this).removeClass('navHidden');
-    }
-    else if(!$(this).hasClass('navHidden')) {
+    } else if(!$(this).hasClass('navHidden')) {
       $("#navbar").animate({
         height: 0
       }, 400)
       .animate({
-        opacity: 0
-      }, 0)
+        opacity: 0,
+        top: '-7' + $(this).height()
+      }, 0);
 
       $(this).addClass('navHidden');
     }
