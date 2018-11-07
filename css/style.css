@@ -6,7 +6,7 @@ body, html {
 
 body {
   /*background-color: #c1d0f0;*/
-  background-color: #ffffff;
+  background-color: #D5E3F2;
   font-family: "montserrat", sans-serif;
 }
 
@@ -130,7 +130,7 @@ nav {
 
 /* GENERAL */
 
-.linklogo_github, .linklogo_gmail, .linklogo_instagram, .linklogo_facebook {
+.linklogo_github, .linklogo_gmail, .linklogo_instagram, .linklogo_facebook, .linklogo_linkedin {
   display: inline-block;
   transition: 0.5s;
   margin-right: 1vw;
@@ -159,7 +159,13 @@ nav {
   margin-top: -0.8vh;
 }
 
-.link:hover .linklogo_github, .link:hover .linklogo_gmail, .link:hover .linklogo_instagram, .link:hover .linklogo_facebook {
+.linklogo_linkedin img {
+  height: 3.3vh;
+  vertical-align: middle;
+  margin-top: -0.7vh;
+}
+
+.link:hover .linklogo_github, .link:hover .linklogo_gmail, .link:hover .linklogo_instagram, .link:hover .linklogo_facebook, .link:hover .linklogo_linkedin {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
   -o-transform: rotate(360deg);
